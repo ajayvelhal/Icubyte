@@ -1,15 +1,23 @@
 int add(String numbers) {
-
+  List<String> numList = [];
   ///Check if the string is not empty
   if (numbers.isEmpty) return 0;
 
+  // Check for custom delimiter
+  if (numbers.startsWith('//')) {
+    var delimiter = numbers[2];
+    print(delimiter);
+    numbers = numbers.substring(4);
+    print(numbers);
+    numList = numbers.split(delimiter);
+  }
 
-  /// Check if the number contains \n.
-  numbers = numbers.replaceAll('\n',",");
-
-
-  List<String> numList = numbers.split(",");
-
+  else{
+    /// Check if the number contains \n.
+    numbers = numbers.replaceAll('\n',",");
+    numbers = numbers.replaceAll('//',",");
+    numList = numbers.split(",");
+  }
   /// List to store the negative numbers.
   List<int> negatives = [];
   int count = 0;

@@ -33,6 +33,15 @@ void main() {
       expect(add('1\n2,3'), equals(6));
     });
 
+    test('Custom delimiters should be supported', () {
+      expect(add('//;\n1;2'), equals(3));
+    });
+
+    test('Negative numbers should throw an exception', () {
+      expect(() => add('1,-2'), throwsA(isA<FormatException>().having((e) => e.message, 'message', contains('negative numbers not allowed'))));
+    });
+
+
     test('Multiple negative numbers should throw an exception with all negatives listed', () {
       expect(() => add('1,-2,-3'), throwsA(isA<FormatException>().having((e) => e.message, 'message', contains('negative numbers not allowed -2, -3'))));
     });
