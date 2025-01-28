@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Icubyte
-=======
-=======
->>>>>>> e5c47a5 (basic calculator with TDD approach implemented)
-# incubyte_assignment
+
+# String Calculator TDD Kata
 
 A new Flutter project.
 
@@ -20,7 +15,4 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
-<<<<<<< HEAD
->>>>>>> e5c47a5 (basic calculator with TDD approach implemented)
-=======
->>>>>>> e5c47a5 (basic calculator with TDD approach implemented)
+
