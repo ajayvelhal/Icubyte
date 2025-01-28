@@ -28,5 +28,11 @@ void main() {
     test('Multiple numbers should return the sum', () {
       expect(add('1,2,3'), equals(6));
     });
+
+    test('Multiple negative numbers should throw an exception with all negatives listed', () {
+      expect(() => add('1,-2,-3'), throwsA(isA<FormatException>().having((e) => e.message, 'message', contains('negative numbers not allowed -2, -3'))));
+    });
   });
+
+
 }
