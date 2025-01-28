@@ -36,20 +36,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
-class Incubyte extends StatelessWidget {
-  const Incubyte({super.key});
-  add(){
-
-  }
-  @override
-  Widget build(BuildContext context) {
-
-
-    return const Placeholder();
-  }
-}
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
